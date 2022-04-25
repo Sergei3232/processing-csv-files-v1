@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:12.7
+    restart: on-failure
+    environment:
+      - "POSTGRES_USER=root"
+      - "POSTGRES_PASSWORD=111"
+      - "POSTGRES_DB=csv_db"
+    ports:
+      - "5450:5432"
